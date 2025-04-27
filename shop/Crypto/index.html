@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="payment_gateway.css">
+    <link rel="icon" href="../Icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Gateway</h1>
+        <form id="payment-form">
+            <div class="payment-option">
+                <label>
+                    <input type="radio" name="payment-method" value="csp" required>
+                    Pay with CSP
+                </label>
+            </div>
+            <div class="payment-option">
+                <label>
+                    <input type="radio" name="payment-method" value="wallet">
+                    Pay with Wallet
+                </label>
+                <div class="wallet-details">
+                    <span id="balance-text">Wallet Balance:</span>
+                    <span id="current-balance">Loading...</span>
+                    <button type="button" class="wallet-recharge" onclick="redirectToDashboard()">+</button>
+                </div>
+            </div>
+            <div class="payment-amount">
+                <h4>Amount to Pay:</h4>
+                <a id="current-payable">Loading...</a>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="back-button" onclick="handleBack()">Back</button>
+                <button type="button" onclick="confirmPayment()">Confirm Payment</button>
+            </div>
+        </form>
+    </div>
+    <script src="../auth.js"></script>
+    <script src="payment_gateway.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bid History</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="../shop.css">
+    <link rel="icon" href="../Icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bid_history.css">
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search items...">
+    </div>  
+    <main class="main-content">
+        <section id="product-list" class="product-list">
+            <h2>Bid History</h2>
+            <table id="product-container">
+                <thead>
+                    <tr>
+                        <th>Bidder Name</th>
+                        <th>Bid Amount</th>
+                        <th>Bid Time</th>
+                    </tr>
+                </thead>
+                <tbody id="product-container-tbody">
+                    <!-- Dynamically filled with products -->
+                </tbody>
+            </table>
+        </section>
+    <script src="bid_history.js"></script>
+    <script src="admin.js"></script>
+    <script defer src = "../auth.js"> </script>
+</body>
+</html>

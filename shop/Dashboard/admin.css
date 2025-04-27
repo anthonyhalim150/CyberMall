@@ -1,0 +1,574 @@
+/* Sidebar */
+.sidebar {
+    background-color: var(--primary-color);
+    color: white;
+    width: 150px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav ul li {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.sidebar-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-nav ul li a:hover {
+    background-color: var(--highlight-color);
+}
+
+.arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown.open .arrow {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    position: relative;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    padding: 10px 20px;
+    font-size: 1rem;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--highlight-color);
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+/* Shop Metrics */
+.metrics-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.metric {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 15px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Product List Table */
+.product-list table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures no space between table cells */
+    margin-top: 30px;
+    border: 1px solid #ddd; /* Adds a border around the entire table */
+}
+
+.product-list th,
+.product-list td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd; /* Adds a border to each cell */
+}
+
+.product-list th {
+    background-color: var(--primary-color); /* Adjust the primary color variable */
+    color: white;
+    text-transform: uppercase; /* Optional: Makes header text uppercase */
+}
+
+.product-list tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Adds a subtle striping effect */
+}
+
+.product-list tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+    cursor: default; /* Optional: Changes cursor to pointer */
+}
+
+.form-section {
+    margin-top: 30px; 
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%; 
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    resize: none; /*Ini to make resizenya cma pake ngescroll dripada bisa dibesarin/kecilin */
+    border: 1px solid #ddd;
+}
+
+#product-price,
+#product-stock {
+    width: 20%; 
+}
+
+#product-name,
+#product-category{
+    width: 50%;
+}
+#product-description,
+#product-image {
+    width: 98%; 
+}
+
+/* Button */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+}
+
+.search-container{
+    margin-top: 20px;
+    max-width: 700px;
+    margin-left: 420px;
+}
+.filters{
+    margin-left: 230px;
+}
+
+.hidden {
+    display: none;
+}
+#product-container td {
+    vertical-align: middle; /* Vertically aligns content in the middle */
+    text-align: center; /* Horizontally centers the content (optional) */
+}
+
+/* Style for the images */
+#product-container .product-image {
+    max-height: 50px; /* Set a maximum height for the images */
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    display: block; /* Ensures proper alignment */
+    margin: 0 auto; /* Centers the image horizontally in its cell */
+}
+
+/* Product Overview Styles */
+.product-overview {
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for width/height */
+    background-color: #fff7e6; /* Cream background */
+    border: 2px solid #ff8800; /* Orange border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    display: none; /* Hidden by default */
+    max-width: 500px;
+    width: 100%; /* Responsive width */
+    max-height: 80vh; /* Limit the height of the modal */
+    overflow-x: hidden; /* Enable vertical scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
+.product-overview img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-overview .details label {
+    display: block;
+    font-weight: bold;
+    color: #ff8800; /* Orange text */
+    margin-top: 10px;
+}
+
+
+.product-overview .details input,
+.product-overview .details textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    text-align: center; /*Change this if you want the text inside the text area to not be centered */
+}
+
+.product-overview button {
+    background-color: #ff8800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.product-overview button:hover {
+    background-color: #ff6600;
+}
+
+.product-overview #delete-button {
+    background-color: pink;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+.pointer-row {
+    cursor: pointer !important;
+}
+
+
+
+.product-overview #delete-button:hover {
+    background-color: red;
+    color: #fefefe;
+}
+
+
+.product-overview .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 25px; /* Smaller font size */
+    font-weight: bold;
+    color: #ff8800;
+    cursor: pointer;
+    padding: 20px 20px; /* Reduce padding to make the clickable area smaller */
+    line-height: 1;
+    border-radius: 100%; /* Circular button */
+    transform: translate(20%, -50%);
+    width: 20px; /* Fixed width for the button */
+    height: 20px; /* Fixed height for the button */
+    display: flex; /* Use flex to center the text inside the button */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+.product-overview .close-btn:hover {
+    color: #ff6600; /* Darker orange on hover */
+    background-color: rgba(255, 136, 0, 0.1);
+}
+
+.product-image, .product-overview .product-image{
+    display: block;
+    width: 50px !important;
+    height: 50px !important;
+}
+
+
+
+
+
+.comment-rating {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: gold;
+    border-top: none !important; 
+    border-left: none !important;
+    border-right: none !important;
+}
+/* Style for red exclamation marks */
+.importance-rating span {
+    font-size: 30px; /* Make the exclamation marks bigger */
+    margin-right: 5px; /* Add a gap between each exclamation mark */
+    display: inline-block; /* Ensure proper spacing and alignment */
+    width: 15px; /* Adjust the width for better visibility */
+}
+
+/* Specific colors for different states */
+.importance-rating span.full {
+    color: red; /* Full red for importance */
+}
+
+.importance-rating span.half {
+    color: red;
+    opacity: 0.3; /* Semi-transparent red for half importance */
+}
+
+.importance-rating span.empty {
+    color: lightgray; /* Light gray for empty importance */
+}
+
+
+.feedback-page.hidden { display: none; }
+.feedback-page {
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #fff7e6; /* Cream background */
+    border: 2px solid #ff8800; /* Orange border */
+    padding: 20px;
+    border-radius: 8px;
+    height: 500px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.feedback-content {
+    text-align: center;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.rating-container {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.rating-stars {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.rating-stars span {
+    margin-right: 5px;
+}
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.comment-text {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+.rating-container {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.rating-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.rating-stars {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #ff8800;
+}
+
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #ff8800;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #ff8800;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff6600;
+}
+/* Red triangle warning */
+.red-triangle {
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.red-triangle:hover {
+    color: darkred;
+}
+
+
+/* Feedback comment textarea styling */
+.feedback-comment {
+    width: 100%;
+    height: 60px;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 14px;
+    overflow-y: auto;
+    background: #f9f9f9; 
+    margin-top: 5px;/* Adds spacing below the comment */
+}
+
+/* Additional spacing between sections */
+#feedback-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Red triangle warning */
+.red-triangle {
+    display: inline-block;
+    text-align: center;
+    width: 100%; /* Ensure the span takes the full width of its container */
+    cursor: pointer;
+    font-size: 20px; /* Adjust size if needed */
+}
+
+.sort-container {
+    position: relative;
+    display: inline-block;
+}
+
+.sort-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sort-button:hover {
+    background-color: var(--highlight-color);
+}
+
+#sort-arrow {
+    margin-left: 8px;
+}
+
+
+.sort-option {
+    display: block;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sort-option:hover {
+    background-color:var(--highlight-color) ;
+}
+.sort-arrow {
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.picture-link {
+    text-decoration: none;
+}
+.button-image {
+    width: 24px; /* Adjust size */
+    height: 24px; /* Adjust size, this is for auction list icon */
+}
+/* Styles for Amount input box */
+#deposit-amount,
+#withdraw-amount {
+    width: 150px; /* Adjust width as needed */
+    padding: 8px; /* Adjust padding for better usability */
+    font-size: 14px; /* Adjust font size if needed */
+    border: 1px solid #ccc; /* Optional: Styling for border */
+    border-radius: 4px; /* Optional: Rounded corners */
+    margin: 5px 0; /* Optional: Add margin for spacing */
+}

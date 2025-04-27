@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Auction</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="auction.css">
+  <link rel="icon" href="Icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="/index"><strong>Live Auction</strong></a>
+      
+      <!-- Add a toggle button for smaller screens -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar content inside a collapsible div -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="controls">
+          <input type="text" id="search-input" placeholder="Search items...">
+          <select id="sort-select">
+            <option value="">Sort By</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A to Z</option>
+            <option value="name-desc">Name: Z to A</option>
+          </select>
+        </div>
+        
+        <ul class="navbar-nav ms-auto header-icons">
+          <div class="d-flex align-items-center">
+            <p class="mb-0">
+              <strong id="current-balance-symbol">Current Balance:</strong> 
+              <span id="current-balance">Loading...</span>
+            </p>
+          </div>
+          <li class="nav-item">
+            <a href="/index" title="Home" class="nav-link">
+              <img src="Icons/home-icon.png" alt="Home Icon">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/my_bids" title="My Bids" class="nav-link">
+              <img src="Icons/bid-history.png" alt="My Bids Icon">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="customer-support" title="Customer Support" class="nav-link">
+              <img src="Icons/auction-customer-support.png" alt="Customer Support Icon">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <main class="auction-container">
+    <div id="auction-items"></div>
+  </main>
+
+  <section id="product-overview" class="product-overview hidden">
+    <button class="close-btn">&times;</button>
+    <img id="product-image" class="product-image" src="" alt="Product Image">
+    <div class="details">
+      <label for="product-name">Name:</label>
+      <input type="text" id="product-name" readonly>
+
+      <label for="product-price">Starting Price:</label>
+      <input type="number" id="product-price" readonly>
+
+      <label for="product-stock">Stock:</label>
+      <input type="number" id="product-stock" readonly>
+
+      <label for="product-description">Description:</label>
+      <textarea id="product-description" readonly></textarea>
+
+      <label for="product-category">Category:</label>
+      <input type="text" id="product-category" readonly>
+    </div>
+  </section>
+  <script src="auth.js"></script>
+  <script src="auction.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

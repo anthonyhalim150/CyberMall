@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberMall-Settings</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="settings.css">
+    <link rel="icon" href="Icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="settings-container">
+        <h1>User Settings</h1>
+    
+        <div class="setting-item">
+            <label for="dark-mode-toggle">Dark Mode:</label>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    
+        <div class="setting-item">
+            <label for="color-scheme">Color Scheme:</label>
+            <select id="color-scheme">
+                <option value="#f8a488">Vibrant Orange</option>
+                <option value="#2196f3">Blue</option>
+                <option value="#4caf50">Green</option>
+                <option value="#e91e63">Pink</option>
+            </select>
+        </div>
+        <button id="back-btn" class="back-btn">Back</button> <!--Buttons cannot use href-->
+        <button id="save-settings" class="save-btn">Save Settings</button>
+    </div>    
+    <script src="auth.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>

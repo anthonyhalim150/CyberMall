@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="../shop.css">
+    <link rel="icon" href="../Icons/favicon.ico" type="image/x-icon">
+    <script defer src="admin.js"></script>
+    <script defer src="upcoming_auction_list.js"></script>
+    <script defer src = "../auth.js"> </script>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search items...">
+    </div>  
+    <main class="main-content">
+        <section id="product-list" class="product-list">
+            <h2>Upcoming Auctions</h2>
+            <table id="product-container">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Starting Price</th>
+                        <th>Stock</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Duration</th>
+                        <th>Start time</th>
+                    </tr>
+                </thead>
+                <tbody id="product-container-tbody">
+                    <!-- Dynamically filled with products -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Product Overview Card -->
+        <section id="product-overview" class="product-overview">
+            <button class="close-btn">&times;</button> <!-- Close button -->
+            <img id = "product-image" class="product-image" src="" alt="Product Image">
+            <div class="details">
+                <label for="product-name">Name:</label><!--Label is used for what you submit-->
+                <input type="text" id="product-name">
+        
+                <label for="product-price">Price:</label>
+                <input type="text" id="product-price">
+        
+                <label for="product-stock">Stock:</label>
+                <input type="number" id="product-stock">
+        
+                <label for="product-description">Description:</label>
+                <textarea id="product-description"></textarea>
+        
+                <label for="product-category">Category:</label>
+                <input type="text" id="product-category">
+
+                <label for="image-form">Image:</label>
+                <input type="file" id="image-form" accept="image/*"> 
+
+                <label for="product-stock">Duration:</label>
+                <input type="number" id="product-duration">
+                <label for="product-stock">Start time:</label>
+                <input type="datetime-local" id="product-start">
+                <small>Example: 10/15/2024 10:30 PM</small>
+            </div>
+            <button id="save-button">Save Changes</button>
+            <button id="delete-button">Delete Product</button>
+        </section>        
+    </main>
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "crypto",
+  "version": "1.0.0",
+  "main": "crypto_server.js",
+  "scripts": {
+    "start": "node crypto_server.js",
+    "dev": "nodemon crypto_server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "algosdk": "^3.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {},
+  "description": ""
+}

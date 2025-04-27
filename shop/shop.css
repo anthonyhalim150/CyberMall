@@ -1,0 +1,513 @@
+/* Colors */
+:root {
+    --primary-color: #f8a488; /* Vibrant Orange */
+    --secondary-color: #fff8f0; /* Pastel Cream */
+    --text-color: #2c3e50;
+    --highlight-color: #ffefd5;
+    --success-color: #60c657; /* Success Green */
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: var(--secondary-color) !important;
+    margin: 0 !important;
+    padding: 0!important;
+    color: var(--text-color)!important;
+}
+body.loading {
+    visibility: hidden; /* Prevent the page from showing unstyled */
+}
+
+body.loading::before {
+    visibility: visible;
+    content: 'Loading...';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+h2, h3 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.container-fluid {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.8rem !important;
+    margin-right: 10px; /* Adds some space from the top and left edges */
+    font-weight: bold;
+    color: white;
+    flex: 0 0 auto; /* Ensures it does not shrink or grow */
+}
+
+.search-container {
+    flex: 1; /* Takes the remaining space in the middle */
+    display: flex;
+    justify-content: center;
+}
+
+#search-bar {
+    width: 90%;  /* Adjust the width as per your requirement */
+    max-width: 400px; /* Limits the maximum width */
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.navbar-collapse {
+    flex: 0 0 auto; /* Ensures it does not shrink or grow */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item a {
+    font-size: 1rem;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.nav-item a:hover {
+    color: var(--highlight-color);
+}
+/* Adjust icons for smaller screens */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 5px; /* Add spacing between icons */
+}
+
+.navbar-toggler-icon {
+    background-color: var(--primary-color); /* Match your primary color */
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+
+/* General styles for nav-item */
+.navbar-icons .nav-item {
+    margin: 0;                /* Prevent unwanted spacing */
+    padding: 0;               /* Reset padding */
+    display: flex;            /* Ensure child elements align properly */
+    justify-content: center;  /* Center child content */
+    align-items: center;      /* Center child content */
+}
+
+
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    font-size: 1rem !important;
+    border-radius: 25px !important;
+    transition: background-color 0.3s !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--highlight-color) !important;
+    color: var(--text-color) !important;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.quantity-control button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity-control button:hover {
+    background-color: var(--highlight-color);
+}
+
+.quantity-control input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+/* Center the checkout and total section */
+.cart-total {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn-success {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn-success:hover {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+}
+
+.list-group-item span {
+    font-weight: bold;
+    color: var(--success-color);
+}
+
+/*Kalo ga ada bawah ini, bakal ada ^ down arrow pas change quantity*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* For Firefox */
+}
+
+.blue-link {
+    color: rgb(6, 122, 255);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.blue-link:hover {
+    color: rgb(61, 61, 239);
+    text-decoration: none;
+}
+
+.item-overview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    display: none;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center text */
+    max-height: 80vh; /* Limits height to 80% of the viewport */
+    overflow-y: auto; /* Enables vertical scrolling if content exceeds max-height */
+}
+
+
+.item-overview.visible {
+    display: block;
+}
+
+.item-overview h3 {
+    margin-bottom: 15px;
+}
+
+.item-overview button {
+    margin-top: 15px;
+}
+
+
+.item-overview .close-btn:hover {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+}
+
+.item-overview .close-btn{
+    background-color: var(--primary-color);
+    width: 90px;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+
+
+.comment-section {
+    background-color: var(--highlight-color); /* Light highlight background */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.comment-section h3, 
+.comment-section h4 {
+    color: var(--primary-color); /* Vibrant orange headings */
+    margin-bottom: 1rem;
+}
+
+.comment-section {
+    background-color: var(--highlight-color); /* Soft pastel background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.comment-section h2 {
+    color: var(--primary-color); /* Vibrant orange */
+    margin-bottom: 1.5rem;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#comment-text {
+    width: 100%;
+    height: 150px;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+#comment-text:focus {
+    border-color: var(--success-color);
+    outline: none;
+}
+
+.submit-comment {
+    align-self: center; /* Center the button horizontally */
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 25px;/* Makes it rounder even though border is none, border adds a line or a style around the element*/
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-comment:hover {
+    background-color: #e68a62; /* Slightly darker orange */
+}
+/* Feedback link styling */
+.feedback-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.feedback-link:hover {
+    color: var(--highlight-color);
+}
+
+.feedback-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    filter: invert(100%);
+    transition: transform 0.3s ease;
+}
+.item-description{
+    color:black;
+}
+
+.feedback-link:hover .feedback-icon {
+    transform: scale(1.2);
+}
+/* Floating Feedback Button */
+.floating-feedback {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.floating-feedback:hover {
+    background-color: #e68a62;
+    transform: translateY(-4px);
+}
+
+.floating-feedback img {
+    width: 20px;
+    height: 15px;
+    margin-right: 8px;
+    filter: invert(100%);
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: gray;
+}
+.star-rating span {
+    cursor: pointer;
+    margin: 0 8px; /* Add space between each star */
+}
+.star-rating span.active {
+    color: gold;
+}
+
+
+/* General styles for buttons */
+.cart-btn, .support-btn, .profile-btn {
+    width: 40px;              /* Uniform size for buttons */
+    height: 40px;             /* Ensure buttons are square */
+    display: flex;            /* Center the content */
+    justify-content: center;  /* Center the icon */
+    align-items: center;      /* Center the icon */
+    padding: 0;               /* Remove extra padding */
+    border-radius: 50%;       /* Full circle buttons */
+    cursor: pointer;          /* Pointer on hover */
+    transition: all 0.3s ease;
+    background-color: transparent; /* Transparent background */
+    border: none;             /* Remove borders */
+    box-shadow: none;         /* Remove any box shadows */
+}
+
+/* Images inside buttons */
+.support-btn img, .cart-btn img, .profile-btn img {
+    width: 30px;              /* Uniform icon size */
+    height: 30px;             /* Uniform icon size */
+    margin: 0;                /* Remove spacing around the image */
+    padding: 0;               /* Reset padding */
+    border: none;             /* Remove any image borders */
+    box-shadow: none;         /* Ensure no shadow on images */
+}
+.cart-btn img{
+    width: 45px;              /* Uniform icon size */
+    height: 45px;             /* Uniform icon size */
+    margin: 0;                /* Remove spacing around the image */
+    padding: 0;               /* Reset padding */
+    border: none;             /* Remove any image borders */
+    box-shadow: none;         /* Ensure no shadow on images */
+
+}
+
+/* Hover effects */
+.support-btn:hover, .cart-btn:hover, .profile-btn:hover {
+    background-color: var(--highlight-color); /* Highlight on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25); /* Add hover shadow */
+}
+
+/* Dropdown menu */
+.navbar-icons .dropdown-menu {
+    position: absolute;       /* Position dropdown properly */
+    top: 60px;                /* Offset dropdown below the profile button */
+    list-style: none;         /* Remove list bullets */
+    margin: 0;                /* Reset margins */
+    padding: 10px;            /* Add padding */
+    display: none;            /* Initially hide the dropdown */
+    background-color: white;  /* Dropdown background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a light shadow */
+    z-index: 10;              /* Ensure dropdown appears above other elements */
+}
+
+.navbar-icons .dropdown-menu .dropdown-item {
+    display: block;             /* Make the item a block element, biar tengah */
+    width: 87%;                /* Take up the full width of the dropdown */
+    padding: 10px 15px;         /* Add padding for a larger clickable area */
+    text-align: left;           /* Align text to the left */
+    text-decoration: none;      /* Remove underline */
+    color: var(--primary-color); /* Match primary theme color */
+    cursor: pointer;            /* Add pointer on hover */
+    box-sizing: border-box;     /* Include padding and border in width */
+}
+
+.navbar-icons .dropdown-menu .dropdown-item:hover {
+    background-color: var(--highlight-color); /* Highlight on hover */
+    color: white;             /* Change text color on hover */
+}
+
+#profileDropdown::after {
+    display: none; /* Hides the down arrow */
+}
+
+.like-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.like-icon img {
+    width: 24px;
+    height: 24px;
+}

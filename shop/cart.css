@@ -1,0 +1,66 @@
+html, body { /* Ensures footer is always at bottom*/
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+.card{
+    border: none;
+    background-color: var(--secondary-color);/*Margin color for child element(If no background-color for card element, then it is going to be transparent, mixing up the colors for dark mode*/
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.empty-cart {
+    display: flex; /* Enables flexbox for centering */
+    flex-direction: column; /* Stacks the image and text vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    height: 50%; /* Ensures the container takes full viewport height */
+    text-align: center; /* Centers text alignment */
+    font-weight: bold; /* Makes the text bold */
+    color: red; /* Applies the text color variable */
+}
+
+.empty-cart img {
+    width: 20%;
+    height: 30%;
+    margin-bottom: 20px;
+    margin-right: 3%;
+}
+
+.empty-cart p {
+    margin-left: 2%; /* Removes default paragraph margins */
+}
+.list-group-item {
+    border: none;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    background-color: var(--highlight-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.price-container {
+    display: flex;
+    align-items: center; /* Vertically align the price */
+    min-width: 90px; /* Ensure the price container has a consistent width */
+    justify-content: center; /* Align price to the right */
+}
+
+.h4{
+    color: var(--text-color);
+}

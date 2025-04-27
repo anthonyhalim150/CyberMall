@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Comment Analysis</title>
+    <!-- Link to external Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="../static/AI_comment.css">
+    <link rel="stylesheet" href="../../../shop.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">AI Comment Rating Analysis</h2>
+
+        <!-- Home Page Section -->
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Welcome to AI Comment Analysis</h4>
+                <p>This tool analyzes comments from your database, rates their importance and quality based on a neural network model, and also uses sentiment analysis.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Go back to Home</h4>
+                <button class="btn btn-success" onclick="location.href='../../../index.html'">Home</button>
+            </div>
+        </div>        
+        <!-- Training Section -->
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Model Training</h4>
+                <p>If you wish to train the model with your latest comments, click the button below. This will process your comments, train the model, and save it for later use.</p>
+                <button class="btn btn-success train-btn">Start Training</button>
+            </div>
+        </div>
+
+        <!-- Analyzing Section -->
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Analyze Comments</h4>
+                <p>If you want to analyze comments based on the trained model, click the button below. This will evaluate the comments and show their predicted importance and quality ratings.</p>
+                <button class="btn btn-success analyze-btn">Analyze Comments</button>
+            </div>
+        </div>
+
+        <!-- Analysis Results Section -->
+        <div id="analysis-result">
+            <!-- Analysis results will be displayed here dynamically -->
+        </div>
+
+    </div>
+
+    <!-- Link to external JS file -->
+    <script src="../static/AI_comment.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

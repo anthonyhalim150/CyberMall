@@ -1,0 +1,41 @@
+<!-- product_list -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="admin.css"> 
+    <link rel="stylesheet" href="../shop.css">
+    <link rel="icon" href="../Icons/favicon.ico" type="image/x-icon">
+    <script defer src = "admin.js"> </script>
+    <script defer src = "user_list.js"></script>
+    <script defer src = "../auth.js"> </script>
+
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search items...">
+    </div>  
+    <main class="main-content">
+        <section id="product-list" class="product-list">
+            <h2>User List</h2>
+            <table id="product-container">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>User Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody id = "product-container tbody">
+                    <!-- Dynamically filled with products -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+
+</body>
+</html>

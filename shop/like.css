@@ -1,0 +1,13 @@
+html, body { /* Ensures footer is always at bottom*/
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}

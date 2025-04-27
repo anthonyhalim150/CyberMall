@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberMall - Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="icon" href="Icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#"><strong>CyberMall</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" id="navbar-links"></ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container my-5">
+        <h2>Sign Up</h2>
+        <form id="sign-up-form" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirm_password" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirm_password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+        <div id="signup_message" class="mt-3 text-danger"></div>
+        <div class="mt-4 text-center">
+            <p>
+                <span class="text-secondary">Already have an account? </span>
+                <a href="/login" class="blue-link text-primary fw-bold">Login here</a>
+            </p>
+        </div>
+    </main>
+    
+    <footer class="bg-orange text-white text-center py-3">
+        <p>&copy; 2024 CyberMall. All Rights Reserved.</p>
+    </footer>
+    <script src="auth.js"></script>
+    <script src="signup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

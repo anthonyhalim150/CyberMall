@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Metrics</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="../shop.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="../Icons/favicon.ico" type="image/x-icon">
+    <script defer src="admin.js"></script>
+    <script defer src="metrics.js"></script>
+    <script defer src = "../auth.js"> </script>
+</head>
+<body>
+    <main class="main-content">
+        <section id="shop-metrics" class="metrics">
+            <h2>Shop Metrics</h2>
+            <div class="filters">      
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date">
+        
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date">
+        
+                <button id="filter-button">Apply Filters</button>
+            </div>
+        
+            <h3>Revenue Over Time</h3>
+            <canvas id="sales-chart"></canvas>
+        
+            <h3>Product Metrics Over Time</h3>
+            <canvas id="product-metrics-chart"></canvas>
+        
+            <h3>Product Sales Comparison</h3>
+            <canvas id="product-comparison-chart"></canvas>
+            
+            <h3>User Registrations Over Time</h3>
+            <canvas id="user-registration-chart"></canvas>
+
+        </section>        
+    </main>
+    
+</body>
+</html>
+

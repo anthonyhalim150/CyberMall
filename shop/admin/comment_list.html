@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="../shop.css">
+    <link rel="icon" href="../Icons/favicon.ico" type="image/x-icon">
+    <script defer src = "../auth.js"> </script>
+    <script defer src="admin.js"></script>
+    <script defer src="comment_list.js"></script>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search items...">
+    </div>
+    <main class="main-content">
+        <section id="product-list" class="product-list">
+            <h2>User Comments</h2>
+            <table id="product-container">
+                <thead>
+                    <tr>
+                        <th style="width: 125px;">
+                            Importance
+                            <span id="importance-arrow" class="sort-arrow">⬇</span>
+                        </th>
+                        <th>Username</th>
+                        <th>Comments</th>
+                        <th>
+                            Quality
+                            <span id="quality-arrow" class="sort-arrow">⬇</span>
+                        </th>
+                        <th>Date</th>
+                        <th>Feedback</th>
+                    </tr>
+                </thead>                
+                <tbody id="product-container-tbody">
+                    <!-- Dynamically filled with products -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Feedback Page for editing feedback -->
+    <div id="feedback-page" class="feedback-page hidden">
+        <div class="feedback-content">
+            <span id="close-feedback" class="close">&times;</span>
+            <h3>Edit Feedback</h3>
+            <form id="feedback-form">
+                <p id="comment-text"></p> <!-- Comment will be displayed here -->
+
+                <!-- Importance Rating -->
+                <div class="rating-container">
+                    <label>Importance Rating:</label>
+                    <div id="importance-stars" class="rating-stars">
+                        <!-- Dynamically filled with exclamation marks -->
+                    </div>
+                    <input type="number" id="importance-rating" min="1" max="5" required>
+                </div>
+
+                <!-- Website Rating -->
+                <div class="rating-container">
+                    <label>Website Rating:</label>
+                    <div id="website-stars" class="rating-stars">
+                        <!-- Dynamically filled with stars -->
+                    </div>
+                    <input type="number" id="website-rating" min="1" max="5" required>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>

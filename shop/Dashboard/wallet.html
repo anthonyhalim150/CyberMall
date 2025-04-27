@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Wallet Address</title>
+    <link rel="stylesheet" href="admin.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="../shop.css">
+    <link rel="icon" href="../Icons/favicon.ico" type="image/x-icon">
+    <script defer src="admin.js"></script>
+    <script defer src="wallet.js"></script>
+    <script defer src = "../auth.js"> </script>
+</head>
+<body>
+    <main class="main-content">
+        <section id="wallet-info" class="form-section">
+            <h2>Your Wallet</h2>
+            <p><strong>Withdraw Address:</strong> <span id="current-address">Loading...</span></p>
+            <p><strong>Current Balance:</strong> <span id="current-balance">Loading...</span></p>
+        </section>
+        <section id="update-wallet" class="form-section">
+            <h2>Update Wallet Address</h2>
+            <form id="address-form">
+                <div class="form-group">
+                    <label for="crypto-wallet">Cryptocurrency Wallet Address:</label>
+                    <input type="text" id="crypto-wallet" required class="form-input" placeholder="Enter your wallet address">
+                </div>
+                <button type="submit" class="btn-primary">Update Address</button>
+            </form>
+        </section>
+        <section id="update-wallet" class="form-section">
+            <h2>Deposit to Wallet</h2>
+            <form id="deposit-form">
+                <div class="form-group">
+                    <label for="deposit-amount">Deposit Amount:</label>
+                    <input type="text" id="deposit-amount" required class="form-input" placeholder="Enter Deposit Amount">
+                </div>
+                <button type="submit" class="btn-primary">Deposit</button>
+            </form>
+        </section>
+        <section id="withdraw-wallet" class="form-section">
+            <h2>Withdraw from Wallet</h2>
+            <form id="withdraw-form">
+                <div class="form-group">
+                    <label for="withdraw-amount">Withdraw Amount:</label>
+                    <input type="text" id="withdraw-amount" required class="form-input" placeholder="Enter Withdraw Amount">
+                </div>
+                <button type="submit" class="btn-primary">Withdraw</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
